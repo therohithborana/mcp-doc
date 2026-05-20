@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>JIVA MCP — Documentation</title>
+<title>Anarix MCP — Documentation</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 <style>
   :root {
@@ -579,7 +579,7 @@
     <div class="logo-badge">
       <img class="logo-mark" src="https://cdn.anarix.ai/anarix-ui/assets/images/logo/logo-large.svg" alt="Anarix logo" />
       <div class="logo-text">
-        <div class="name">JIVA MCP</div>
+        <div class="name">Anarix MCP</div>
         <div class="sub">for Claude Desktop</div>
       </div>
     </div>
@@ -601,7 +601,7 @@
 <div class="main">
   <div class="topbar">
     <div class="breadcrumb">
-      <span>JIVA MCP</span>
+      <span>Anarix MCP</span>
       <span>›</span>
       Documentation
     </div>
@@ -612,7 +612,7 @@
     <!-- OVERVIEW -->
     <section id="overview">
       <div class="section-label">Documentation</div>
-      <h1>JIVA <span class="accent">MCP</span></h1>
+      <h1>Anarix <span class="accent">MCP</span></h1>
       <p class="hero-desc">
         Connect Claude Desktop to your Anarix advertising and marketplace data. Ask natural-language questions and get instant performance insights.
       </p>
@@ -624,12 +624,12 @@
         <div class="chip"><span class="dot"></span> Product Rankings</div>
       </div>
 
-      <h2 id="what-is-jiva">What is JIVA MCP?</h2>
+      <h2 id="what-is-jiva">What is Anarix MCP?</h2>
       <p>
-        JIVA MCP is a Model Context Protocol (MCP) server that bridges Claude Desktop with your Anarix account. It lets you query advertising and marketplace data conversationally — simply describe what you want to know and JIVA fetches the relevant data, runs analysis, and returns results directly inside Claude.
+        Anarix MCP is a Model Context Protocol (MCP) server that bridges Claude Desktop with your Anarix account. It lets you query advertising and marketplace data conversationally — simply describe what you want to know and Anarix MCP fetches the relevant data, runs analysis, and returns results directly inside Claude.
       </p>
       <p>
-        JIVA is built for <strong style="color:var(--text)">real operational analysis</strong>. It connects to live account data, not a static dataset — so every response reflects current performance.
+        Anarix MCP is built for <strong style="color:var(--text)">real operational analysis</strong>. It connects to live account data, not a static dataset — so every response reflects current performance.
       </p>
     </section>
 
@@ -639,7 +639,7 @@
     <section id="prerequisites">
       <div class="section-label">Before You Start</div>
       <h2>Prerequisites</h2>
-      <p>Before setting up JIVA MCP, make sure you have the following:</p>
+      <p>Before setting up Anarix MCP, make sure you have the following:</p>
 
       <table>
         <thead>
@@ -653,12 +653,12 @@
           </tr>
           <tr>
             <td><strong style="color:var(--text)">Anarix Account</strong></td>
-            <td>You need valid login credentials for the Anarix/JIVA environment.</td>
+            <td>You need valid login credentials for the Anarix environment.</td>
             <td>Contact your admin</td>
           </tr>
           <tr>
             <td><strong style="color:var(--text)">Node.js</strong></td>
-            <td>Required: Node.js 18 or newer so <code>npx</code> is available for launching the JIVA MCP connection.</td>
+            <td>Required: Node.js 18 or newer so <code>npx</code> is available for launching the Anarix MCP connection.</td>
             <td><a href="https://nodejs.org/en/download">Download →</a></td>
           </tr>
         </tbody>
@@ -671,7 +671,7 @@
     <section id="setup">
       <div class="section-label">Installation</div>
       <h2>Installation &amp; Setup</h2>
-      <p>Setting up JIVA MCP takes about 5 minutes. The flow below follows the same pattern most MCP desktop integrations use: install Claude Desktop, make sure Node is available, then replace the config cleanly.</p>
+      <p>Setting up Anarix MCP takes about 5 minutes. The flow below follows the same pattern most MCP desktop integrations use: install Claude Desktop, make sure Node is available, then replace the config cleanly.</p>
 
       <div class="steps">
 
@@ -686,7 +686,7 @@
             <div class="callout info">
               <div class="callout-icon">ℹ️</div>
               <div class="callout-body">
-                <p>JIVA MCP works with Claude Desktop only — it is <strong>not</strong> available in the Claude web browser interface.</p>
+                <p>Anarix MCP works with Claude Desktop only — it is <strong>not</strong> available in the Claude web browser interface.</p>
               </div>
             </div>
           </div>
@@ -699,7 +699,7 @@
           </div>
           <div class="step-body">
             <div class="step-title">Check Node.js Availability</div>
-            <p>Install <strong style="color:var(--text)">Node.js 18+</strong> locally so <code>npx</code> is available for the JIVA MCP command.</p>
+            <p>Install <strong style="color:var(--text)">Node.js 18+</strong> locally so <code>npx</code> is available for the Anarix MCP command.</p>
             <p>Download Node.js from <a href="https://nodejs.org/en/download">nodejs.org</a> and install the current LTS version. After installation, open Terminal or Command Prompt and verify:</p>
             <pre><code>node --version
 npx --version</code></pre>
@@ -793,14 +793,14 @@ npx --version</code></pre>
             <div class="step-line"></div>
           </div>
           <div class="step-body">
-            <div class="step-title">Verify the JIVA Connection</div>
+            <div class="step-title">Verify the Anarix MCP Connection</div>
             <p>After reopening Claude Desktop:</p>
             <ol style="padding-left:18px; color:var(--text-muted); font-size:14px; line-height:2;">
               <li>Open a new chat</li>
               <li>Look for the tools / connectors icon (hammer icon or plug icon)</li>
-              <li>Confirm <strong style="color:var(--text)">jiva</strong> appears in the list</li>
+              <li>Confirm <strong style="color:var(--text)">anarix</strong> appears in the list</li>
             </ol>
-            <img class="step-image" src="verification.png" alt="Claude Desktop tools menu showing the JIVA connector" />
+            <img class="step-image" src="verification.png" alt="Claude Desktop tools menu showing the Anarix MCP connector" />
             <div class="callout tip">
               <div class="callout-icon">💡</div>
               <div class="callout-body">
@@ -820,26 +820,26 @@ npx --version</code></pre>
     <section id="auth">
       <div class="section-label">Authentication</div>
       <h2>Authentication Flow</h2>
-      <p>JIVA uses a secure browser-based login flow. You'll only need to do this once per session (or when your session expires).</p>
+      <p>Anarix MCP uses a secure browser-based login flow. You'll only need to do this once per session (or when your session expires).</p>
 
       <div class="steps">
         <div class="step">
           <div class="step-spine"><div class="step-num">1</div><div class="step-line"></div></div>
           <div class="step-body">
             <div class="step-title">Trigger Login</div>
-            <p>Start a new chat and type any JIVA-related query, such as:</p>
+            <p>Start a new chat and type any Anarix MCP-related query, such as:</p>
             <div class="prompt-list">
-              <div class="prompt-item">use Jiva and show me the accounts I have access to.</div>
+              <div class="prompt-item">use Anarix MCP and show me the accounts I have access to.</div>
             </div>
-            <img class="step-image" src="login-question.png" alt="Example Claude Desktop chat message asking Jiva to show the accounts the user has access to" />
-            <p>JIVA will detect that you are not authenticated and generate a login URL.</p>
+            <img class="step-image" src="login-question.png" alt="Example Claude Desktop chat message asking Anarix MCP to show the accounts the user has access to" />
+            <p>Anarix MCP will detect that you are not authenticated and generate a login URL.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-spine"><div class="step-num">2</div><div class="step-line"></div></div>
           <div class="step-body">
             <div class="step-title">Open the Login URL</div>
-            <p>Click the URL provided by JIVA. It will open a browser window where you can sign in with your Anarix credentials.</p>
+            <p>Click the URL provided by Anarix MCP. It will open a browser window where you can sign in with your Anarix credentials.</p>
           </div>
         </div>
         <div class="step">
@@ -860,7 +860,7 @@ npx --version</code></pre>
           <div class="step-spine"><div class="step-num">4</div><div class="step-line"></div></div>
           <div class="step-body">
             <div class="step-title">Session Established</div>
-            <p>JIVA will confirm authentication and list the accounts available to you. You're now ready to start querying.</p>
+            <p>Anarix MCP will confirm authentication and list the accounts available to you. You're now ready to start querying.</p>
           </div>
         </div>
       </div>
@@ -899,12 +899,12 @@ npx --version</code></pre>
       </div>
 
       <div class="callout tip">
-        <div class="callout-icon">✅</div>
-        <div class="callout-body">
-          <div class="callout-title">All three worked?</div>
-          <p>You're fully set up. JIVA is connected, authenticated, and pulling live data from your Anarix account.</p>
-        </div>
-      </div>
+              <div class="callout-icon">✅</div>
+              <div class="callout-body">
+                <div class="callout-title">All three worked?</div>
+                <p>You're fully set up. Anarix MCP is connected, authenticated, and pulling live data from your Anarix account.</p>
+              </div>
+            </div>
     </section>
 
     <div class="divider"></div>
@@ -913,7 +913,7 @@ npx --version</code></pre>
     <section id="troubleshooting">
       <div class="section-label">Support</div>
       <h2>Troubleshooting</h2>
-      <p>If JIVA does not appear or authenticate correctly, use the checks below before escalating to your Anarix admin.</p>
+      <p>If Anarix MCP does not appear or authenticate correctly, use the checks below before escalating to your Anarix admin.</p>
 
       <div class="trouble-list">
         <div class="trouble-item">
@@ -929,7 +929,7 @@ npx --version</code></pre>
         </div>
 
         <div class="trouble-item">
-          <div class="trouble-q">JIVA does not appear in the tools or connectors list</div>
+          <div class="trouble-q">Anarix MCP does not appear in the tools or connectors list</div>
           <div class="trouble-a">
             <ul>
               <li>Fully quit Claude Desktop and reopen it.</li>
@@ -956,7 +956,7 @@ npx --version</code></pre>
           <div class="trouble-q">Login keeps repeating or the sign-in link expires</div>
           <div class="trouble-a">
             <ul>
-              <li>Trigger a fresh JIVA query to generate a new login URL.</li>
+              <li>Trigger a fresh Anarix MCP query to generate a new login URL.</li>
               <li>Complete the browser login immediately after opening the link.</li>
               <li>You may need to sign in again after a long gap, after clearing local data, or when the session token expires.</li>
             </ul>
@@ -967,17 +967,17 @@ npx --version</code></pre>
           <div class="trouble-q">I can log in, but I don't see the expected accounts</div>
           <div class="trouble-a">
             <ul>
-              <li>Ask JIVA: <em>"Show me the accounts I have access to."</em></li>
-              <li>JIVA only exposes accounts your Anarix credentials are authorized to access.</li>
+              <li>Ask Anarix MCP: <em>"Show me the accounts I have access to."</em></li>
+              <li>Anarix MCP only exposes accounts your Anarix credentials are authorized to access.</li>
               <li>If an expected account is missing, contact your Anarix admin to confirm permissions.</li>
             </ul>
           </div>
         </div>
 
         <div class="trouble-item">
-          <div class="trouble-q">Can I use JIVA in the Claude web app or on mobile?</div>
+          <div class="trouble-q">Can I use Anarix MCP in the Claude web app or on mobile?</div>
           <div class="trouble-a">
-            <p>No. JIVA MCP is currently designed for Claude Desktop on macOS and Windows, not the Claude web interface or mobile apps.</p>
+            <p>No. Anarix MCP is currently designed for Claude Desktop on macOS and Windows, not the Claude web interface or mobile apps.</p>
           </div>
         </div>
       </div>
@@ -985,7 +985,7 @@ npx --version</code></pre>
 
     <div style="margin-top: 40px; padding: 20px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); text-align: center;">
       <p style="font-size:13px; color:var(--text-dim); margin:0;">
-        JIVA MCP Documentation · Anarix Platform · Questions? Contact your Anarix account manager.
+        Anarix MCP Documentation · Anarix Platform · Questions? Contact your Anarix account manager.
       </p>
     </div>
 
