@@ -580,7 +580,7 @@
       <img class="logo-mark" src="https://cdn.anarix.ai/anarix-ui/assets/images/logo/logo-large.svg" alt="Anarix logo" />
       <div class="logo-text">
         <div class="name">Anarix MCP</div>
-        <div class="sub">for Claude Desktop</div>
+        <div class="sub">for Claude</div>
       </div>
     </div>
   </div>
@@ -614,7 +614,7 @@
       <div class="section-label">Documentation</div>
       <h1>Anarix <span class="accent">MCP</span></h1>
       <p class="hero-desc">
-        Connect Claude Desktop to your Anarix advertising and marketplace data. Ask natural-language questions and get instant performance insights.
+        Connect Claude to your Anarix advertising and marketplace data. Ask natural-language questions and get instant performance insights.
       </p>
       <div class="hero-chips">
         <div class="chip"><span class="dot"></span> Ad Performance</div>
@@ -626,7 +626,7 @@
 
       <h2 id="what-is-jiva">What is Anarix MCP?</h2>
       <p>
-        Anarix MCP is a Model Context Protocol (MCP) server that bridges Claude Desktop with your Anarix account. It lets you query advertising and marketplace data conversationally — simply describe what you want to know and Anarix MCP fetches the relevant data, runs analysis, and returns results directly inside Claude.
+        Anarix MCP is a Model Context Protocol (MCP) server that connects Claude with your Anarix account. It lets you query advertising and marketplace data conversationally — simply describe what you want to know and Anarix MCP fetches the relevant data, runs analysis, and returns results directly inside Claude.
       </p>
       <p>
         Anarix MCP is built for <strong style="color:var(--text)">real operational analysis</strong>. It connects to live account data, not a static dataset — so every response reflects current performance.
@@ -647,19 +647,14 @@
         </thead>
         <tbody>
           <tr>
-            <td><strong style="color:var(--text)">Claude Desktop</strong></td>
-            <td>The desktop app for macOS or Windows. Not the web version.</td>
-            <td><a href="https://claude.ai/download">Download →</a></td>
-          </tr>
-          <tr>
             <td><strong style="color:var(--text)">Anarix Account</strong></td>
             <td>You need valid login credentials for the Anarix environment.</td>
             <td>Contact your admin</td>
           </tr>
           <tr>
-            <td><strong style="color:var(--text)">Node.js</strong></td>
-            <td>Required: Node.js 18 or newer so <code>npx</code> is available for launching the Anarix MCP connection.</td>
-            <td><a href="https://nodejs.org/en/download">Download →</a></td>
+            <td><strong style="color:var(--text)">Claude</strong></td>
+            <td>You can use either the Claude desktop app or the Claude website in your browser.</td>
+            <td><a href="https://claude.ai">Open Claude →</a></td>
           </tr>
         </tbody>
       </table>
@@ -671,7 +666,7 @@
     <section id="setup">
       <div class="section-label">Installation</div>
       <h2>Installation &amp; Setup</h2>
-      <p>Setting up Anarix MCP takes about 5 minutes. The flow below follows the same pattern most MCP desktop integrations use: install Claude Desktop, make sure Node is available, then replace the config cleanly.</p>
+      <p>Setting up Anarix MCP takes about 2 minutes. You can do this from the Claude app or directly in the Claude website using Custom Connectors.</p>
 
       <div class="steps">
 
@@ -681,14 +676,8 @@
             <div class="step-line"></div>
           </div>
           <div class="step-body">
-            <div class="step-title">Download &amp; Install Claude Desktop</div>
-            <p>If you haven't already, download Claude Desktop from <a href="https://claude.ai/download">claude.ai/download</a> and install it on your machine.</p>
-            <div class="callout info">
-              <div class="callout-icon">ℹ️</div>
-              <div class="callout-body">
-                <p>Anarix MCP works with Claude Desktop only — it is <strong>not</strong> available in the Claude web browser interface.</p>
-              </div>
-            </div>
+            <div class="step-title">Open Claude</div>
+            <p>Open either the Claude desktop app or the Claude website in your browser and sign in to your account.</p>
           </div>
         </div>
 
@@ -698,18 +687,9 @@
             <div class="step-line"></div>
           </div>
           <div class="step-body">
-            <div class="step-title">Check Node.js Availability</div>
-            <p>Install <strong style="color:var(--text)">Node.js 18+</strong> locally so <code>npx</code> is available for the Anarix MCP command.</p>
-            <p>Download Node.js from <a href="https://nodejs.org/en/download">nodejs.org</a> and install the current LTS version. After installation, open Terminal or Command Prompt and verify:</p>
-            <pre><code>node --version
-npx --version</code></pre>
-            <div class="callout tip">
-              <div class="callout-icon">💡</div>
-              <div class="callout-body">
-                <div class="callout-title">Important</div>
-                <p>If <code>node</code> or <code>npx</code> is not recognized, close and reopen Terminal or Command Prompt after installation, then run the version checks again.</p>
-              </div>
-            </div>
+            <div class="step-title">Open Settings</div>
+            <p>Click <strong style="color:var(--text)">Settings</strong>, then go to <strong style="color:var(--text)">Connectors</strong> and click <strong style="color:var(--text)">Customize</strong>.</p>
+            <img class="step-image" src="Settings-page.png" alt="Claude settings page showing the Connectors section and Customize option" />
           </div>
         </div>
 
@@ -719,18 +699,17 @@ npx --version</code></pre>
             <div class="step-line"></div>
           </div>
           <div class="step-body">
-            <div class="step-title">Open the Claude Desktop Config File</div>
-            <p>In Claude Desktop:</p>
+            <div class="step-title">Add a Custom Connector</div>
             <ol style="padding-left:18px; color:var(--text-muted); font-size:14px; line-height:2;">
-              <li>Click the menu icon or go to <strong style="color:var(--text)">Settings</strong></li>
-              <li>Open the <strong style="color:var(--text)">Developers</strong> tab</li>
-              <li>Click <strong style="color:var(--text)">Edit Config</strong></li>
+              <li>Click <strong style="color:var(--text)">Add Connector</strong></li>
+              <li>Click <strong style="color:var(--text)">Add Custom Connector</strong></li>
+              <img class="step-image" src="custom-connector.png" alt="Claude custom connector flow showing the Add Connector and Add Custom Connector actions" />
+              <li>Set the name to <strong style="color:var(--text)">JIVA</strong></li>
+              <li>Set the remote MCP server URL to <code>https://mcp.anarix.ai/mcp/sse</code></li>
+              <img class="step-image" src="remove-mcp-url.png" alt="Custom connector form with the JIVA name and remote MCP server URL fields filled in" />
+              <li>Click <strong style="color:var(--text)">Add</strong></li>
             </ol>
-            <p>You will see the <code>claude_desktop_config.json</code> file. Double-click it to open it.</p>
-            <div class="step-image-grid">
-              <img class="step-image" src="settings-page.png" alt="Claude Desktop settings page with the Developers tab and Edit Config option" />
-              <img class="step-image" src="config-file.png" alt="Claude Desktop config file entry that needs to be clicked to open the claude_desktop_config.json file" />
-            </div>
+            <p>Once you click Add, the JIVA MCP connector will be available in Claude.</p>
           </div>
         </div>
 
@@ -740,72 +719,19 @@ npx --version</code></pre>
             <div class="step-line"></div>
           </div>
           <div class="step-body">
-            <div class="step-title">Replace the Config Content</div>
-            <p>Select all existing content in the config file and replace it with the following:</p>
-            <div class="code-header">
-              <div class="code-label">claude_desktop_config.json</div>
-              <button class="copy-btn" type="button" data-copy-target="jiva-config">Copy</button>
-            </div>
-            <pre id="jiva-config"><code><span class="json-punct">{</span>
-  <span class="json-key">"mcpServers"</span><span class="json-punct">: {</span>
-    <span class="json-key">"jiva"</span><span class="json-punct">: {</span>
-      <span class="json-key">"command"</span><span class="json-punct">:</span> <span class="json-str">"npx"</span><span class="json-punct">,</span>
-      <span class="json-key">"args"</span><span class="json-punct">: [</span>
-        <span class="json-str">"-y"</span><span class="json-punct">,</span>
-        <span class="json-str">"mcp-remote"</span><span class="json-punct">,</span>
-        <span class="json-str">"https://mcp.anarix.ai/mcp/sse"</span><span class="json-punct">,</span>
-        <span class="json-str">"--allow-http"</span>
-      <span class="json-punct">]</span>
-    <span class="json-punct">}</span>
-  <span class="json-punct">},</span>
-  <span class="json-key">"preferences"</span><span class="json-punct">: {</span>
-    <span class="json-key">"coworkScheduledTasksEnabled"</span><span class="json-punct">:</span> <span class="json-bool">false</span><span class="json-punct">,</span>
-    <span class="json-key">"ccdScheduledTasksEnabled"</span><span class="json-punct">:</span> <span class="json-bool">false</span><span class="json-punct">,</span>
-    <span class="json-key">"sidebarMode"</span><span class="json-punct">:</span> <span class="json-str">"chat"</span><span class="json-punct">,</span>
-    <span class="json-key">"coworkWebSearchEnabled"</span><span class="json-punct">:</span> <span class="json-bool">true</span>
-  <span class="json-punct">}</span>
-<span class="json-punct">}</span></code></pre>
-            <div class="callout danger">
-              <div class="callout-icon">🚫</div>
-              <div class="callout-body">
-                <div class="callout-title">Replace, don't append</div>
-                <p>Replace the <em>entire</em> existing content of the config file. If there is already an <code>mcpServers</code> key, merge carefully — duplicate keys will cause JSON parse errors and Claude will fail to start.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="step">
-          <div class="step-spine">
-            <div class="step-num">5</div>
-            <div class="step-line"></div>
-          </div>
-          <div class="step-body">
-            <div class="step-title">Save the Config and Restart Claude Desktop</div>
-            <p>Save the config file, then <strong style="color:var(--text)">fully quit</strong> Claude Desktop — don't just close the window. Re-open it after it has fully exited.</p>
-            <p>On macOS, right-click the Claude icon in the Dock and choose <strong style="color:var(--text)">Quit</strong>. On Windows, right-click the system tray icon and quit.</p>
-          </div>
-        </div>
-
-        <div class="step">
-          <div class="step-spine">
-            <div class="step-num">6</div>
-            <div class="step-line"></div>
-          </div>
-          <div class="step-body">
-            <div class="step-title">Verify the Anarix MCP Connection</div>
-            <p>After reopening Claude Desktop:</p>
+            <div class="step-title">Verify the JIVA Connection</div>
+            <p>After adding the connector:</p>
             <ol style="padding-left:18px; color:var(--text-muted); font-size:14px; line-height:2;">
               <li>Open a new chat</li>
               <li>Look for the tools / connectors icon (hammer icon or plug icon)</li>
-              <li>Confirm <strong style="color:var(--text)">jiva</strong> appears in the list</li>
+              <li>Confirm <strong style="color:var(--text)">JIVA</strong> appears in the list</li>
             </ol>
             <img class="step-image" src="verification.png" alt="Claude Desktop tools menu showing the Anarix MCP connector" />
             <div class="callout tip">
               <div class="callout-icon">💡</div>
               <div class="callout-body">
                 <div class="callout-title">Tools not showing?</div>
-                <p>Restart Claude Desktop a second time. On some machines, the first restart doesn't fully initialize the MCP connection.</p>
+                <p>Refresh Claude or reopen the app/site, then check the connectors list again.</p>
               </div>
             </div>
           </div>
@@ -820,18 +746,18 @@ npx --version</code></pre>
     <section id="auth">
       <div class="section-label">Authentication</div>
       <h2>Authentication Flow</h2>
-      <p>Anarix MCP uses a secure browser-based login flow. You'll only need to do this once per session (or when your session expires).</p>
+      <p>Anarix MCP uses a secure browser-based login flow. You'll only need to do this once per session or when your session expires.</p>
 
       <div class="steps">
         <div class="step">
           <div class="step-spine"><div class="step-num">1</div><div class="step-line"></div></div>
           <div class="step-body">
             <div class="step-title">Trigger Login</div>
-            <p>Start a new chat and type any Anarix MCP-related query, such as:</p>
+            <p>Start a new chat and type any JIVA-related query, such as:</p>
             <div class="prompt-list">
-              <div class="prompt-item">use Anarix MCP and show me the accounts I have access to.</div>
+              <div class="prompt-item">use Jiva and show me the accounts I have access to.</div>
             </div>
-            <img class="step-image" src="login-question.png" alt="Example Claude Desktop chat message asking Anarix MCP to show the accounts the user has access to" />
+            <img class="step-image" src="login-question.png" alt="Example Claude chat message asking Jiva to show the accounts the user has access to" />
             <p>Anarix MCP will detect that you are not authenticated and generate a login URL.</p>
           </div>
         </div>
@@ -846,7 +772,7 @@ npx --version</code></pre>
           <div class="step-spine"><div class="step-num">3</div><div class="step-line"></div></div>
           <div class="step-body">
             <div class="step-title">Complete Sign-In</div>
-            <p>Enter your Anarix username and password and complete the sign-in. Return to Claude Desktop immediately after.</p>
+            <p>Enter your Anarix username and password and complete the sign-in. Return to Claude after that.</p>
             <div class="callout warn">
               <div class="callout-icon">⚠️</div>
               <div class="callout-body">
@@ -868,7 +794,7 @@ npx --version</code></pre>
       <h3>Re-authentication</h3>
       <p>You may need to log in again when:</p>
       <ul style="padding-left:18px; color:var(--text-muted); margin-bottom:14px; line-height:2; font-size:14px;">
-        <li>Starting a new Claude Desktop session after a long gap</li>
+        <li>Starting a new Claude session after a long gap</li>
         <li>Your session token has expired</li>
         <li>You switch accounts or clear local data</li>
       </ul>
@@ -917,37 +843,34 @@ npx --version</code></pre>
 
       <div class="trouble-list">
         <div class="trouble-item">
-          <div class="trouble-q">Claude Desktop won't start after I edited the config</div>
+          <div class="trouble-q">I can't find the custom connector option</div>
           <div class="trouble-a">
             <ul>
-              <li>Make sure the JSON is valid and has no trailing commas.</li>
-              <li>Confirm <code>mcpServers</code> appears only once.</li>
-              <li>Confirm the MCP URL is exactly <code>https://mcp.anarix.ai/mcp/sse</code>.</li>
-              <li>If you already had other MCP servers configured, merge carefully instead of duplicating keys.</li>
+              <li>Open Claude Settings and look for <strong style="color:var(--text)">Connectors</strong>.</li>
+              <li>Click <strong style="color:var(--text)">Customize</strong> to manage custom connectors.</li>
+              <li>If you still do not see it, refresh the browser or reopen the Claude app.</li>
             </ul>
           </div>
         </div>
 
         <div class="trouble-item">
-          <div class="trouble-q">Anarix MCP does not appear in the tools or connectors list</div>
+          <div class="trouble-q">JIVA does not appear in the tools or connectors list</div>
           <div class="trouble-a">
             <ul>
-              <li>Fully quit Claude Desktop and reopen it.</li>
-              <li>Restart a second time if needed. Some machines do not initialize MCP on the first restart.</li>
-              <li>Double-check that you edited the correct <code>claude_desktop_config.json</code> file.</li>
-              <li>Verify that Node.js is installed locally and that <code>npx --version</code> runs successfully.</li>
+              <li>Go back to Connectors and confirm the custom connector was added with the name <strong style="color:var(--text)">JIVA</strong>.</li>
+              <li>Make sure the remote MCP server URL is exactly <code>https://mcp.anarix.ai/mcp/sse</code>.</li>
+              <li>Refresh Claude or reopen the app/site and check again.</li>
             </ul>
           </div>
         </div>
 
         <div class="trouble-item">
-          <div class="trouble-q">Node or npx is not found</div>
+          <div class="trouble-q">The connector was added, but it won't connect</div>
           <div class="trouble-a">
             <ul>
-              <li>Install the latest Node.js LTS release from <a href="https://nodejs.org/en/download">nodejs.org</a>.</li>
-              <li>Close and reopen Terminal or Command Prompt after installation.</li>
-              <li>Verify with <code>node --version</code> and <code>npx --version</code>.</li>
-              <li>If the commands still fail, reinstall Node.js and make sure the installer adds it to your system PATH.</li>
+              <li>Check that the remote MCP server URL is exactly <code>https://mcp.anarix.ai/mcp/sse</code>.</li>
+              <li>Remove the connector and add it again if the URL or name was entered incorrectly.</li>
+              <li>Refresh Claude and retry from a new chat.</li>
             </ul>
           </div>
         </div>
@@ -975,9 +898,9 @@ npx --version</code></pre>
         </div>
 
         <div class="trouble-item">
-          <div class="trouble-q">Can I use Anarix MCP in the Claude web app or on mobile?</div>
+          <div class="trouble-q">Can I use Anarix MCP in the Claude web app?</div>
           <div class="trouble-a">
-            <p>No. Anarix MCP is currently designed for Claude Desktop on macOS and Windows, not the Claude web interface or mobile apps.</p>
+            <p>Yes. You can use Anarix MCP in either the Claude desktop app or the Claude website.</p>
           </div>
         </div>
       </div>
