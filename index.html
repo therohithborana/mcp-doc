@@ -213,6 +213,73 @@
     flex-shrink: 0;
   }
 
+  .connect-list {
+    margin-top: 40px;
+  }
+
+  .connect-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
+  }
+
+  .connect-accordion {
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  }
+
+  .connect-accordion:last-child {
+    border-bottom: none;
+  }
+
+  .connect-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 28px 32px;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .connect-summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .connect-summary:hover {
+    background: rgba(119, 70, 152, 0.03);
+  }
+
+  .connect-summary::after {
+    content: '›';
+    color: #4f6ef7;
+    font-size: 30px;
+    line-height: 1;
+    flex-shrink: 0;
+    transition: transform 0.15s ease;
+  }
+
+  .connect-accordion[open] .connect-summary::after {
+    transform: rotate(90deg);
+  }
+
+  .connect-body {
+    padding: 0 32px 28px;
+    border-top: 1px solid rgba(226, 232, 240, 0.8);
+    background: linear-gradient(180deg, rgba(248, 250, 252, 0.45), rgba(255, 255, 255, 0.98));
+  }
+
+  .connect-placeholder {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin: 0;
+  }
+
   h2 {
     font-size: 22px;
     font-weight: 600;
@@ -588,13 +655,10 @@
 
   <span class="nav-section">Getting Started</span>
   <a class="nav-link" href="#overview">Overview</a>
-  <a class="nav-link" href="#prerequisites">Prerequisites</a>
-  <a class="nav-link" href="#setup">Installation &amp; Setup</a>
-  <a class="nav-link" href="#auth">Authentication</a>
-  <a class="nav-link" href="#first-test">First Test</a>
+  <a class="nav-link" href="#connect-guides">Connect Guides</a>
 
   <span class="nav-section">Reference</span>
-  <a class="nav-link" href="#troubleshooting">Troubleshooting</a>
+  <a class="nav-link" href="#claude-setup">Claude Setup</a>
 </aside>
 
 <!-- ── MAIN ── -->
@@ -635,40 +699,39 @@
 
     <div class="divider"></div>
 
-    <!-- PREREQUISITES -->
-    <section id="prerequisites">
-      <div class="section-label">Before You Start</div>
-      <h2>Prerequisites</h2>
-      <p>Before setting up Anarix MCP, make sure you have the following:</p>
+    <section id="connect-guides" class="connect-list">
+      <div class="section-label">AI Agents</div>
+      <h2>Connect Anarix MCP to Different AI Agents</h2>
+      <p>Start with the Claude guide below. Codex can be added here later as its own expandable section.</p>
 
-      <table>
-        <thead>
-          <tr><th>Requirement</th><th>Details</th><th>Status Check</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong style="color:var(--text)">Anarix Account</strong></td>
-            <td>You need valid login credentials for the Anarix environment.</td>
-            <td>Contact your admin</td>
-          </tr>
-          <tr>
-            <td><strong style="color:var(--text)">Claude</strong></td>
-            <td>You can use either the Claude desktop app or the Claude website in your browser.</td>
-            <td><a href="https://claude.ai">Open Claude →</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+      <div class="connect-card">
+        <details class="connect-accordion" id="claude-setup" open>
+          <summary class="connect-summary">How to Connect ANARIX MCP to Claude</summary>
+          <div class="connect-body">
+            <section id="setup">
+              <div class="section-label">Claude</div>
+              <h2>Installation &amp; Setup</h2>
+              <p>Setting up Anarix MCP takes about 2 minutes. You can do this from the Claude app or directly in the Claude website using Custom Connectors.</p>
 
-    <div class="divider"></div>
+              <table>
+                <thead>
+                  <tr><th>Requirement</th><th>Details</th><th>Status Check</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong style="color:var(--text)">Anarix Account</strong></td>
+                    <td>You need valid login credentials for the Anarix environment.</td>
+                    <td>Contact your admin</td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color:var(--text)">Claude</strong></td>
+                    <td>You can use either the Claude desktop app or the Claude website in your browser.</td>
+                    <td><a href="https://claude.ai">Open Claude →</a></td>
+                  </tr>
+                </tbody>
+              </table>
 
-    <!-- SETUP -->
-    <section id="setup">
-      <div class="section-label">Installation</div>
-      <h2>Installation &amp; Setup</h2>
-      <p>Setting up Anarix MCP takes about 2 minutes. You can do this from the Claude app or directly in the Claude website using Custom Connectors.</p>
-
-      <div class="steps">
+              <div class="steps">
 
         <div class="step">
           <div class="step-spine">
@@ -737,17 +800,16 @@
         </div>
 
       </div>
-    </section>
+            </section>
 
-    <div class="divider"></div>
+            <div class="divider"></div>
 
-    <!-- AUTH -->
-    <section id="auth">
-      <div class="section-label">Authentication</div>
-      <h2>Authentication Flow</h2>
-      <p>Anarix MCP uses a secure browser-based login flow. You'll only need to do this once per session or when your session expires.</p>
+            <section id="auth">
+              <div class="section-label">Authentication</div>
+              <h2>Authentication Flow</h2>
+              <p>Anarix MCP uses a secure browser-based login flow. You'll only need to do this once per session or when your session expires.</p>
 
-      <div class="steps">
+              <div class="steps">
         <div class="step">
           <div class="step-spine"><div class="step-num">1</div><div class="step-line"></div></div>
           <div class="step-body">
@@ -798,15 +860,14 @@
         <li>You switch accounts or clear local data</li>
       </ul>
       <p>Simply trigger a new login query and repeat the flow above.</p>
-    </section>
+            </section>
 
-    <div class="divider"></div>
+            <div class="divider"></div>
 
-    <!-- FIRST TEST -->
-    <section id="first-test">
-      <div class="section-label">Quick Start</div>
-      <h2>Your First Test</h2>
-      <p>Once authenticated, start with these prompts to confirm everything is working:</p>
+            <section id="first-test">
+              <div class="section-label">Quick Start</div>
+              <h2>Your First Test</h2>
+              <p>Once authenticated, start with these prompts to confirm everything is working:</p>
 
       <h3>Step 1 — Check account access</h3>
       <div class="prompt-list">
@@ -830,15 +891,14 @@
                 <p>You're fully set up. Anarix MCP is connected, authenticated, and pulling live data from your Anarix account.</p>
               </div>
             </div>
-    </section>
+            </section>
 
-    <div class="divider"></div>
+            <div class="divider"></div>
 
-    <!-- TROUBLESHOOTING -->
-    <section id="troubleshooting">
-      <div class="section-label">Support</div>
-      <h2>Troubleshooting</h2>
-      <p>If Anarix MCP does not appear or authenticate correctly, use the checks below before escalating to your Anarix admin.</p>
+            <section id="troubleshooting">
+              <div class="section-label">Support</div>
+              <h2>Troubleshooting</h2>
+              <p>If Anarix MCP does not appear or authenticate correctly, use the checks below before escalating to your Anarix admin.</p>
 
       <div class="trouble-list">
         <div class="trouble-item">
@@ -902,6 +962,10 @@
             <p>Yes. You can use Anarix MCP in either the Claude desktop app or the Claude website.</p>
           </div>
         </div>
+      </div>
+            </section>
+          </div>
+        </details>
       </div>
     </section>
 
