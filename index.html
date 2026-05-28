@@ -659,6 +659,7 @@
 
   <span class="nav-section">Reference</span>
   <a class="nav-link" href="#claude-setup">Claude Setup</a>
+  <a class="nav-link" href="#codex-setup">Codex Setup</a>
 </aside>
 
 <!-- ── MAIN ── -->
@@ -816,7 +817,7 @@
             <div class="step-title">Trigger Login</div>
             <p>Start a new chat and type any JIVA-related query, such as:</p>
             <div class="prompt-list">
-              <div class="prompt-item">use Jiva and show me the accounts I have access to.</div>
+              <div class="prompt-item">use anarix mcp and login</div>
             </div>
             <img class="step-image" src="login-question.png" alt="Example Claude chat message asking Jiva to show the accounts the user has access to" />
             <p>Anarix MCP will detect that you are not authenticated and generate a login URL.</p>
@@ -963,6 +964,64 @@
           </div>
         </div>
       </div>
+            </section>
+          </div>
+        </details>
+
+        <details class="connect-accordion" id="codex-setup">
+          <summary class="connect-summary">How to Connect Anarix MCP to ChatGPT (Codex)</summary>
+          <div class="connect-body">
+            <section>
+              <div class="section-label">Codex</div>
+              <h2>Installation &amp; Setup</h2>
+              <p>Setting up Anarix MCP in the Codex app takes about 1 minute.</p>
+
+              <div class="steps">
+                <div class="step">
+                  <div class="step-spine">
+                    <div class="step-num">1</div>
+                    <div class="step-line"></div>
+                  </div>
+                  <div class="step-body">
+                    <div class="step-title">Open Settings</div>
+                    <p>In the Codex app, go to <strong style="color:var(--text)">Settings</strong>.</p>
+                  </div>
+                </div>
+
+                <div class="step">
+                  <div class="step-spine">
+                    <div class="step-num">2</div>
+                    <div class="step-line"></div>
+                  </div>
+                  <div class="step-body">
+                    <div class="step-title">Add an MCP Server</div>
+                    <p>Go to <strong style="color:var(--text)">MCP Servers</strong> and click <strong style="color:var(--text)">Add Server</strong>.</p>
+                  </div>
+                </div>
+
+                <div class="step">
+                  <div class="step-spine">
+                    <div class="step-num">3</div>
+                    <div class="step-line"></div>
+                  </div>
+                  <div class="step-body">
+                    <div class="step-title">Enter the Anarix Server Details</div>
+                    <p>Name the MCP server <strong style="color:var(--text)">Anarix</strong> and add the MCP URL below:</p>
+                    <pre><code>https://mcp.anarix.ai/mcp/sse</code></pre>
+                    <img class="step-image" src="codex-mcp.png" alt="Codex MCP server form with the Anarix name and MCP URL entered" />
+                  </div>
+                </div>
+
+                <div class="step">
+                  <div class="step-spine">
+                    <div class="step-num">4</div>
+                  </div>
+                  <div class="step-body">
+                    <div class="step-title">Finish Setup</div>
+                    <p>Save the server. Anarix MCP will then be available inside the Codex app.</p>
+                  </div>
+                </div>
+              </div>
             </section>
           </div>
         </details>
